@@ -24,6 +24,7 @@ public class RouteConfirmation extends ActionBarActivity {
             public void onClick(View v) {
                 Intent route_intent = new Intent("com.hackforgood.myapplication.RouteTracker");
                 startActivity(route_intent);
+
             }
         });
 

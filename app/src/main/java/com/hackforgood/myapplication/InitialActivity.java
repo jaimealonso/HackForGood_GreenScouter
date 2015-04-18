@@ -30,7 +30,12 @@ public class InitialActivity extends ActionBarActivity implements SeekBar.OnSeek
 
         texto2 = (TextView)findViewById(R.id.textView3);
 
-        final ImageButton button = (ImageButton) findViewById(R.id.imageButton);
+        final ImageButton button, button2, button3;
+        button = (ImageButton) findViewById(R.id.imageButton);
+        button2 = (ImageButton) findViewById(R.id.imageButton2);
+        button3 = (ImageButton) findViewById(R.id.imageButton3);
+
+
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 texto2.setText("Corriendo");
@@ -38,7 +43,6 @@ public class InitialActivity extends ActionBarActivity implements SeekBar.OnSeek
             }
         });
 
-        final ImageButton button2 = (ImageButton) findViewById(R.id.imageButton2);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 texto2.setText("Bici");
@@ -46,7 +50,6 @@ public class InitialActivity extends ActionBarActivity implements SeekBar.OnSeek
             }
         });
 
-        final ImageButton button3 = (ImageButton) findViewById(R.id.imageButton3);
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 texto2.setText("Andando");

@@ -1,5 +1,6 @@
 package com.hackforgood.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -49,6 +50,11 @@ public class RouteTracker extends ActionBarActivity {
             public void onClick(View view) {
                 timeSwapBuff += timeInMilliseconds;
                 customHandler.removeCallbacks(updateTimerThread);
+
+                Intent summary_intent = new Intent("com.hackforgood.myapplication.Summary");
+                summary_intent.putExtra("TIME", timerValue.getText());
+                startActivity(summary_intent);
+
             }
         });
 

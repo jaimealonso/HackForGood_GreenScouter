@@ -4,6 +4,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.content.Intent;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 public class Summary extends ActionBarActivity {
@@ -12,6 +16,22 @@ public class Summary extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
+
+        Intent intent = getIntent();
+
+        String time = intent.getStringExtra("TIME");
+
+        TextView timerValue = (TextView) findViewById(R.id.tiempotextdata);
+        timerValue.setText(time);
+
+        final Button backbutton = (Button) findViewById(R.id.button2volver);
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent initial_intent = new Intent(Summary.this, InitialActivity.class);
+                initial_intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(initial_intent);
+            }
+        });
     }
 
 

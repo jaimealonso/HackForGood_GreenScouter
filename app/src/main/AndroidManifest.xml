@@ -51,6 +51,14 @@
         <activity
             android:name=".Summary"
             android:label="@string/title_activity_summary" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hackforgood.myapplication.InitialActivity" />
+            <intent-filter>
+                <action android:name="com.hackforgood.myapplication.Summary" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 
